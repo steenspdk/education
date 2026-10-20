@@ -21,8 +21,9 @@ table Sales
 
 		changedProperty = FormatString
 
-	measure 'Margin %' = DIVIDE ( [Margin], [Sales Amount] )
+	measure 'Margin %' = DIVIDE ( [Sales Amount] - [Total Cost], [Sales Amount] )
 		formatString: 0.00%;-0.00%;0.00%
+		displayFolder: Profitability
 		lineageTag: 78f2291d-1076-4202-b7bc-8d5dcd28f612
 
 		changedProperty = FormatString
